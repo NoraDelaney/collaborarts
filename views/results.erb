@@ -10,11 +10,15 @@
   <body>
 
     <h1>You've found a match</h1>
-      <ul>
+    <div><h3>Click their name to read about their work.</j3></div>
+
+    <div>
+          <ul>
         <% results.each do  |result| %>
       <li><%= result["first_name"] %> <%= result["last_name"] %>, <%= result["email"] %></li>
       <% end %>
     </ul>
+  </div>
   </body>
 </html>
 

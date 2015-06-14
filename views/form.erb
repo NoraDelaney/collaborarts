@@ -10,47 +10,59 @@
 
   <body>
     <h1>Find a collaborator for your artistic project.</h1>
+    <div>
+      Create something cool with another artist. Fill in the form,
+      tell us about yourself and your work, and we'll find you a match!
+    </div>
 
     <form action="/collaborarts/form" method="post">
       <div class="row">
-        <div class="large-12 columns">
+        <div class="small-4 columns">
           <label for="first name">First name:</label>
-          <input type="text" id="first name" name="first name">
+          <input type="text" id="first name" name="first name" required>
         </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
+        <div class="small-4 columns">
           <label for="last name">Last name:</label>
-          <input type="text" id="last name" name="last name">
+          <input type="text" id="last name" name="last name" required>
         </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
+        <div class="small-4 columns">
           <label for="email">Email:</label>
-          <input type="text" id="email" name="email">
+          <input type="text" id="email" name="email" required>
         </div>
       </div>
       <div class="row">
-        <div class="large-6 columns">
+        <div class="small-12 columns">
           <label for="artist type">I am a(n):</label>
           <input type="radio" id="artist type" name="artist type" value="visual artist">Visual Artist
           <input type="radio" id="artist type" name="artist type" value="writer">Writer
           <input type="radio" id="artist type" name="artist type" value="musician">Musician
           <input type="radio" id="artist type" name="artist type" value="actor">Actor
           <input type="radio" id="artist type" name="artist type" value="dancer">Dancer
+          <input type="radio" id="artist type" name="artist type" value="comedian">Comedian
         </div>
       </div>
       <div class="row">
-        <div class="large-6 columns">
+        <div class="small-12 columns">
           <label for="looking for">I am looking for a(n):</label>
           <input type="radio" id="looking for" name="looking for" value="visual artist">Visual Artist
           <input type="radio" id="looking for" name="looking for" value="writer">Writer
           <input type="radio" id="looking for" name="looking for" value="musician">Musician
           <input type="radio" id="looking for" name="looking for" value="actor">Actor
           <input type="radio" id="looking for" name="looking for" value="dancer">Dancer
+          <input type="radio" id="looking for" name="looking for" value="comedian">Comedian
         </div>
-      <div>
-      <input type="submit">
+      </div>
+      <div class="row">
+        <div class="small-8 columns">
+          <label for="description">What's your work like?</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-4 columns">
+            <input type="submit">
+          </div>
+        </div>
     </form>
   </body>
 </html>

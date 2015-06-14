@@ -14,7 +14,7 @@ def db_connection
 end
 
 def submission
-  [params["first name"], params["last name"], params["email"], params["artist type"], params["looking for"]]
+  [params["first name"], params["last name"], params["email"], params["artist type"], params["looking for"], params["description"]]
 end
 
 get '/' do
@@ -28,11 +28,13 @@ end
 post '/collaborarts/form' do
 $looking_for = ""
   db_connection do |conn|
-    conn.exec_params("INSERT INTO users (first_name, last_name, email, artist_type, looking_for) VALUES ($1, $2, $3, $4, $5)", submission)
+    conn.exec_params("INSERT INTO users (first_name, last_name, email, artist_type, looking_for, description) VALUES ($1, $2, $3, $4, $5, $6)", submission)
   end
 
- $looking_for = submission[-1]
+ $looking_for = submission[4]
   redirect '/collaborarts/results'
+
+  binding.pry
 end
 
 
