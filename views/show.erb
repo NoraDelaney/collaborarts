@@ -8,7 +8,17 @@
     <title>Matches</title>
   </head>
 <body>
-  <h1>More about your match:</h1>
+  <h1>More about <%= name %></h1>
+  <ul>
+  <li><%=info[0]['full_name']%></li>
+  <li><%=info[0]['email']%></li>
+  <li><%=info[0]['location']%></li>
+  <li><%=info[0]['description']%></li>
+  </ul>
+
+  <a href="http://localhost:4567/collaborarts/results" class="button">Back to matches</a>
+
+  <a href="http://localhost:4567/collaborarts/form" class="button">Search again</a>
 
 </body>
 

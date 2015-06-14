@@ -15,11 +15,11 @@
     <div>
           <ul>
         <% results.each do  |result| %>
-      <li><%= result["first_name"] %> <%= result["last_name"] %>, <%= result["email"] %></li>
+      <li><a href="/collaborarts/<%=result['full_name']%>"><%= result["full_name"] %></a>, <%= result["location"] %>, <%= result["email"] %></li>
       <% end %>
     </ul>
   </div>
   </body>
 </html>
 
-<a href="http://localhost:4567/collaborarts/form" class="button">Search Again</a>
+<a href="http://localhost:4567/collaborarts/form" class="button">Search again</a>
