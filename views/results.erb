@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Collaborate</title>
+  </head>
+
+  <body>
+
+    <h1>You've found a match</h1>
+      <ul>
+        <% results.each do  |result| %>
+      <li><%= result["first_name"] %> <%= result["last_name"] %>, <%= result["email"] %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
+
+<a href="http://localhost:4567/collaborarts/form" class="button">Search Again</a>
